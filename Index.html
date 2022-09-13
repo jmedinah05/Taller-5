@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link href="style.css" rel="stylesheet" type="text/css">
+     <!--JavaScript Validar Formulario-->
+     <script type="text/javascript" src="validarFormulario.js"></script>
+    </head>
+<body>
+    <div id="contenido">
+    <h3>Menú</h3>
+    <form class="form" name="addForm" id="addForm" method="post"> 
+        <p><b>Registro de usuario:</b></p>
+        <div style="color: rgb(228, 116, 25); background-color: white; border-color: black;" id="alerta"></div>
+        
+            <div class="input-field col s6" id="nombre">
+                <input id="nombre" type="text" placeholder="Nombres" style="width : 320px;" minlength="3" maxlength="50" class="validate"></input>
+                <i class="material-icons prefix">account_circle</i>
+                <span class="helper-text" data-error="Un nombre debe tener al menos 3 letras" data-success="aceptado"></span>
+            </div>
+            <div class="input-field col s6" id="apellido">
+                <input id="apellido" type="text" placeholder="Apellidos" style="width : 320px;" minlength="3" maxlength="50" class="validate"></input>
+                <i class="material-icons prefix">account_circle</i>
+                <span class="helper-text" data-error="Un apellido debe tener al menos 3 letras" data-success="aceptado"></span>
+            </div>
+            <div class="input-field col s6" id="fechaNacimiento">
+                <input type="text" class="datepicker"  style="width : 320px;" class="validate">
+                <i class="material-icons prefix">date_range</i>
+                <span class="helper-text" data-error="Ingrese fecha de nacimiento" data-success="aceptado"></span>
+            </div>
+            <div class="input-field col s6" id="email">
+                <input id="email" type="email" placeholder="Email" style="width : 320px;" minlength="5" maxlength="120" class="validate"></input>
+                <i class="material-icons prefix">email</i>
+                <span class="helper-text" data-error="introduzca un email valido" data-success="aceptado"></span>
+            </div>
+            <div class="input-field col s6" id="usuario">
+                <input id="usuario" type="text"  minlength="5" maxlength="12" placeholder="Usuario" style="width : 320px;" class="validate"></input>
+                <i class="material-icons prefix">account_box</i>
+                <span class="helper-text" data-error="El usuario debe tener al menos 5 letras" data-success="aceptado"></span>
+            </div>
+            <div class="input-field col s6" id="contraseña">
+                <input id="contraseña" type="password"  minlength="5" maxlength="12" placeholder="Contraseña" style="width : 320px;" class="validate"></input>
+                <i class="material-icons prefix">vpn_key</i>
+                <span class="helper-text" data-error="La contraseña debe tener al menos 5 letras" data-success="aceptado"></span>
+            </div>
+            <div class="input-field col s6" id="confirmarContraseña">
+                <input id="confirmarContraseña" type="password"  minlength="5" maxlength="12" placeholder="Confirme su contraseña" style="width : 320px;" class="validate"></input>
+                <i class="material-icons prefix">vpn_key</i>
+                <span class="helper-text" data-error="La confimarción de la contraseña debe tener al menos 5 letras" data-success="aceptado"></span>
+            </div>
+            <div class="desplegable">
+                <label>
+                    <input id="selector" type="checkbox" class="filled-in" value="1" onchange="Verificarcheck()" checked="checkbox" />
+                    <span style="color: black;"><b>¿Ha sufrido enfermedades contagiosas?</b></span>
+                  </label>
+            </div>
+            <br>
+            <div class="row" id="texto">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" class="materialize-textarea" ></textarea>
+                  <label for="textarea1">Nombrelas</label>
+                </div>
+              </div>
+
+            <input type="button" onclick="validarFormulario();"  value="Enviar" >
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
